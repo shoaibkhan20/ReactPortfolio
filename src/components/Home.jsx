@@ -4,10 +4,8 @@ import { Link } from "react-scroll";
 import Typed from 'react-typed'
 import React from 'react';
 
-
 const Home = () => {
   // const [imag,setImage] = useState(false)
-
   return (
     <div
     name="home"
