@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   FaBars,
   FaTimes,
-  // FaGithub,
+  FaGithub,
   FaLinkedin,
   // FaFacebook,
   // FaLinkedinIn,
@@ -108,15 +108,15 @@ const Navbar = () => {
               Linkedin <FaLinkedin className='ml-1 sm:ml-0 text-lg sm:text-2xl' />
             </a>
           </li>
-          {/* <li className='md:w-[160px] h-[60px] flex justify-between items-center sm:ml-[-100px] sm:hover:ml-[-10px] duration-300 bg-[#333333] '>
+          <li className='md:w-[160px] h-[60px] flex justify-between items-center sm:ml-[-100px] sm:hover:ml-[-10px] duration-300 bg-[#333333] '>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href='https://github.com/shoaibkhan20' target='blank'
             >
               Github <FaGithub className='ml-1 sm:ml-0 text-lg sm:text-2xl' />
             </a>
-          </li> */}
-          <li className='md:w-[160px] h-[60px] flex justify-between items-center sm:ml-[-100px] sm:hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+          </li>
+          <li className='md:w-[160px] h-[60px] hidden sm:flex justify-between items-center sm:ml-[-100px] sm:hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href='https://mail.google.com/mail/u/#inbox?compose=CllgCJvlHztTWBPcZRTzjZQMTKFbgtMCxmSTSLKqFQbgMSLPzjsnxZsQRdpnPCMqDSfffGchcvq'
