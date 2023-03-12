@@ -1,5 +1,6 @@
 import React from "react";
-
+import { HiArrowNarrowRight } from 'react-icons/hi';
+import { Link } from "react-scroll"; 
 const About = () => { 
   return (
     <div
@@ -15,23 +16,34 @@ const About = () => {
                 About
               </p>
             </div>
-            <div></div>
           </div>
           <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-            <div className="sm:text-right text-4xl font-bold">
+            <div className="sm:text-right text-2xl sm:text-4xl font-bold">
               <p>
-                Hi. I'm Taminoturoko Briggs, nice to meet you. Please take a
+                Hi. I'm Shoaib khan , nice to meet you. Please take a
                 look around.
               </p>
             </div>
             <div>
               <p>
                 {" "}
-                A software developer with experience in building Responsive and
-                Scalable Web apps. I am well-knowledged in UI/UX principles and
-                practices. In addition to software development, I am also a
-                technical writer--simplifying topics/concepts on the web.
+                I am Professional Front-end Web Developer from pakistan. I have 2 years of experience in web development field. i have worked on different front-end projects.
+                 I am passionate about creating engaging and user-friendly digital experiences.
               </p>
+                 <div>
+                   <Link
+                     to="skills"
+                     smooth
+                     duration={500}
+                     className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-[#0a192f] cursor-pointer"
+                     >
+                       See My Skills
+                   <span className="group-hover:rotate-90 duration-300">
+                      <HiArrowNarrowRight size={25} className="ml-3" />
+                    </span>
+                  </Link>
+               </div>
+              
             </div>
           </div>
         </div>

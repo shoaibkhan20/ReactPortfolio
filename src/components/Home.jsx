@@ -1,18 +1,27 @@
-import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import me from '../assets/me.jpeg';
 import { Link } from "react-scroll"; 
+import Typed from 'react-typed'
+import React from 'react';
+
 
 const Home = () => {
+  // const [imag,setImage] = useState(false)
+
   return (
     <div
     name="home"
-    className="h-screen w-full bg-[#0a192f]"
+    className="h-[700px] md:w-full bg-[#0a192f]"
   >
-    <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-      <div className="flex flex-col justify-center h-full">
-        <h2 className="text-4xl sm:text-6xl font-bold text-white">
-          I'm a Front-end Web Developer
+    <div className="pt-[100px]  sm:pt-0 bg-[#0a192f]  max-w-[1100px] mx-auto flex flex-col items-center justify-center h-full md:flex-row">
+      <div className="flex flex-col justify-center h-full md:w-[60%] px-10 sm:px-[100px]">
+        <h2 className="text-2xl sm:text-4xl font-bold text-white">
+          <span className='text-sky-800 sm:text-7xl'>I'm a</span> <br/><Typed
+                    strings={['Web developer','Programmer','Graphics Designer']}
+                    typeSpeed={100}
+                    backSpeed={80}
+                    loop={true}
+                />
         </h2>
         <p className="text-gray-500 py-4 max-w-md">
           I have 2 years of experience in web development.
@@ -24,7 +33,7 @@ const Home = () => {
             to="about"
             smooth
             duration={500}
-            className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+            className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-sky-800 cursor-pointer"
           >
             About Me
             <span className="group-hover:rotate-90 duration-300">
@@ -33,11 +42,12 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div>
+
+      <div className='w-full md:w-[25%] mr-auto object-left duration-300'>
         <img
           src={me}  
           alt="my profile"
-          className="rounded-[50%] mx-auto w-2/3 md:w-full brightness-[70%] hover:brightness-90"
+          className="rounded-xl shadow-lg mx-auto w-[80%] md:w-full md:brightness-[70%]"
         />
       </div>
     </div>
