@@ -66,7 +66,6 @@ const Works = () => {
 
           {/* will iterate the works data */}
           {
-
             worksData.map((item,index)=>{
 
              return <div
@@ -97,7 +96,7 @@ const Works = () => {
 
 
            })
-          }  
+          }   {/* The End of the Iteration*/}
           
           
           
