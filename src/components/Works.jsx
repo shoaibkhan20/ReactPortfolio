@@ -60,7 +60,7 @@ const Works = () => {
            {/* temprory messege for untill i upload my works */}
 
 
-          <div className='text-white text-4xl w-full text-center border-2 border-sky-500 p-10 col-span-full shadow-lg shadow-sky-400'>Oops! Currently working on Projects. i will upload portfolio projects soon..</div>
+          <div className='text-white text-4xl w-full text-center border-2 border-sky-500 p-10 col-span-full shadow-lg shadow-sky-400'>Currently working on Projects. i will upload portfolio projects soon..</div>
 
         </div>
       </div>
