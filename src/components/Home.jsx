@@ -45,7 +45,7 @@ const Home = () => {
         <img
           src={me}  
           alt="my profile"
-          className="rounded-xl shadow-lg mx-auto w-[80%] md:w-full md:brightness-[70%]"
+          className="rounded-xl shadow-lg mx-auto w-[80%] md:w-full md:brightness-[50%]"
         />
       </div>
     </div>
