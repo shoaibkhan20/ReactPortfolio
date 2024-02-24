@@ -1,24 +1,53 @@
-import React from 'react';
+import React,{useCallback ,useState} from 'react';
+import ImageViewer from 'react-simple-image-viewer';
 // import Dummy from '../assets/code2.png';
-import upwork from '../assets/upwork.jpeg'
-import portfolio_image from '../assets/porfolio_web.jpeg'
+import upworkClone from '../assets/upwork.jpeg'
+import portfolio_web from '../assets/porfolio_web.jpeg'
+import ecommerce_web from '../assets/ecom.png'
 import company_web from '../assets/company_web.jpeg'
 
+
 const Works = () => {
+
+  const [currentImage, setCurrentImage] = useState(0);  // implementing react-image-viewer
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const images = [
+    upworkClone,
+    portfolio_web,
+    ecommerce_web,
+    company_web
+  ]
+  const openImageViewer = useCallback((index) => {
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  }, []);
+
+  const closeImageViewer = () => {
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
+  //? above code is for implemting image viewer for portfolio images
 
   const worksData = [
     {
       title:"Upword-UI Clone",
       disccription:"Clone of upwork website using html , css , javascript",
-      imageUrl : upwork,
-      Demolink : upwork,
+      imageUrl : upworkClone,
+      Demolink : upworkClone,
       Codelink : '#'
     },
     {
       title:"Personal Portfolio",
       disccription:"Created personal portfolio using html , css , bootstrap , javascript",
-      imageUrl : portfolio_image,
-      Demolink : portfolio_image,
+      imageUrl : portfolio_web,
+      Demolink : portfolio_web,
+      Codelink : '#'
+    },
+    {
+      title:"Ecommerce Shop",
+      disccription:"Created Ecommerce website will all advance features including cart,cost calculation using ReactJS",
+      imageUrl : ecommerce_web,
+      Demolink : ecommerce_web,
       Codelink : '#'
     },
     {
@@ -27,8 +56,7 @@ const Works = () => {
       imageUrl : company_web,
       Demolink : company_web,
       Codelink : '#'
-    },
-
+    }
   ]
   return (
     <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
@@ -43,9 +71,8 @@ const Works = () => {
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
 
           {/* will iterate the works data */}
-
           {
-            worksData.map((item , index)=>{
+            worksData.map((item,index)=>{
              return <div
                 style={{ backgroundImage: `url(${item.imageUrl})`,"backgroundPosition":"center top" }}
                 key={index}
@@ -58,11 +85,12 @@ const Works = () => {
               </span>
               <p className='text-center'>{item.disccription}</p>
               <div className='pt-8 text-center'>
-                <a href={item.Demolink} target='blank'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
+                    onClick={()=>openImageViewer(index)}
+                  >
+                    view
                   </button>
-                </a>
+               
                 <a href={item.Codelink}>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
@@ -78,6 +106,15 @@ const Works = () => {
 
 
           {/* <div className='text-white text-4xl w-full text-center border-2 border-sky-500 p-10 col-span-full shadow-lg shadow-sky-400'>Currently working on Projects. i will upload portfolio projects soon..</div> */}
+      {isViewerOpen && (
+        <ImageViewer
+          src={ images }
+          currentIndex={ currentImage }
+          disableScroll={ false }
+          closeOnClickOutside={ true }
+          onClose={ closeImageViewer }
+        />
+      )}    
 
         </div>
       </div>
