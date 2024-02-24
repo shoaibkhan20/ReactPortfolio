@@ -21,7 +21,7 @@ const Navbar = () => {
       <div>
         <h1 className='font-thin text-2xl italic font-serif border px-4 py-1 cursor-pointer'>
           <Link to='home' smooth={true} spy={true} duration={500}>
-            shoaib khan
+            shoaib's portfolio
           </Link>
         </h1>
       </div>

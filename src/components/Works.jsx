@@ -4,7 +4,7 @@ import ImageViewer from 'react-simple-image-viewer';
 import upworkClone from '../assets/upwork.jpeg'
 import portfolio_web from '../assets/porfolio_web.jpeg'
 import ecommerce_web from '../assets/ecom.png'
-import company_web from '../assets/company_web.jpeg'
+import calc from '../assets/calc.png'
 
 
 const Works = () => {
@@ -15,7 +15,7 @@ const Works = () => {
     upworkClone,
     portfolio_web,
     ecommerce_web,
-    company_web
+    calc
   ]
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -33,29 +33,29 @@ const Works = () => {
       title:"Upword-UI Clone",
       disccription:"Clone of upwork website using html , css , javascript",
       imageUrl : upworkClone,
-      Demolink : upworkClone,
-      Codelink : '#'
+      Codelink : 'https://github.com/shoaibkhan20/Upwork-ui-clone',
+      Demolink : 'https://shoaibkhan20.github.io/Upwork-ui-clone/'
     },
     {
-      title:"Personal Portfolio",
+      title:"Bootstrap Portfolio",
       disccription:"Created personal portfolio using html , css , bootstrap , javascript",
       imageUrl : portfolio_web,
-      Demolink : portfolio_web,
-      Codelink : '#'
+      Codelink : 'https://github.com/shoaibkhan20/Bootstrap-Resume',
+      Demolink : 'https://shoaibkhan20.github.io/Bootstrap-Resume/'
     },
     {
       title:"Ecommerce Shop",
       disccription:"Created Ecommerce website will all advance features including cart,cost calculation using ReactJS",
       imageUrl : ecommerce_web,
-      Demolink : ecommerce_web,
+      Demolink : '#',
       Codelink : '#'
     },
     {
-      title:"Company Website",
-      disccription:"Created company website using html , css , javascript",
-      imageUrl : company_web,
-      Demolink : company_web,
-      Codelink : '#'
+      title:"Calculator",
+      disccription:"Created calculator using html , css , javascript",
+      imageUrl : calc,
+      Codelink : 'https://github.com/shoaibkhan20/Arithematic-Calculator',
+      Demolink : 'https://shoaibkhan20.github.io/Arithematic-Calculator/'
     }
   ]
   return (
@@ -85,12 +85,16 @@ const Works = () => {
               </span>
               <p className='text-center'>{item.disccription}</p>
               <div className='pt-8 text-center'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
-                    onClick={()=>openImageViewer(index)}
-                  >
-                    view
+                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
+                  onClick={()=>openImageViewer(index)}
+                >
+                  preview
+                </button>
+                <a href={item.Demolink} target='_blank' rel='noreferrer'>
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
                   </button>
-               
+                </a>
                 <a href={item.Codelink}>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
