@@ -1,5 +1,5 @@
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import me from '../assets/me.jpeg';
+import me from '../assets/me2.jpg';
 import { Link } from "react-scroll"; 
 import Typed from 'react-typed'
 import React from 'react';
@@ -45,7 +45,7 @@ const Home = () => {
         <img
           src={me}  
           alt="my profile"
-          className="rounded-xl shadow-lg mx-auto w-[80%] md:w-full md:brightness-[50%]"
+          className="rounded-xl shadow-lg mx-auto w-[80%] md:w-full md:brightness-[80%]"
         />
       </div>
     </div>

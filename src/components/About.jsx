@@ -27,7 +27,7 @@ const About = () => {
             <div>
               <p>
                 {" "}
-                I am Professional Front-end Web Developer from pakistan. I have 2 years of experience in web development field. i have worked on different front-end projects.
+                I am Professional Web Developer from pakistan. I have 2 years of experience in web development field. i have worked on different front-end projects.
                  I am passionate about creating engaging and user-friendly digital experiences.
               </p>
                  <div>
