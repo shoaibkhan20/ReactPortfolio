@@ -103,7 +103,7 @@ const Navbar = () => {
           <li className='md:w-[160px] h-[60px] flex justify-between items-center sm:ml-[-100px] sm:hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.linkedin.com/in/shoaibkhan10/' target='blank'
+              href='https://www.linkedin.com/in/muhammadshoaib10/' target='blank'
             >
               Linkedin <FaLinkedin className='ml-1 sm:ml-0 text-lg sm:text-2xl' />
             </a>
