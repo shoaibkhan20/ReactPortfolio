@@ -47,8 +47,8 @@ const Works = () => {
       title:"Ecommerce Shop",
       disccription:"Created Ecommerce website with all advance features including cart,cost calculation using ReactJS",
       imageUrl : ecommerce_web,
-      Demolink : '#',
-      Codelink : '#'
+      Demolink : 'https://github.com/shoaibkhan20/React-Ecom.git',
+      Codelink : 'https://github.com/shoaibkhan20/React-Ecom.git'
     },
     {
       title:"Calculator",
