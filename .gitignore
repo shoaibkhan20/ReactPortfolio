@@ -9,7 +9,7 @@
 
 # production
 /build
-../upwork
+
 # misc
 .DS_Store
 .env.local
